@@ -1,0 +1,48 @@
+import { useState } from "react";
+ // 앞에 use가 오면 훅 함수
+ // 앞이 대문자면 컴포넌트
+ // 그 외 그냥 함수
+ // 앞에 on이면 eventhandler
+function Counter() {
+    let num = 0;
+    //배열이면 구조분해가 가능하다
+    // let numberState = useState();
+    // let number = umberState[0];
+    // let setNumber = numberState[1];
+    let [number, setNumber] = useState(0);
+    
+    console.log(number);
+
+    const increase = () => {
+        num += 1;
+        console.log(num);
+    }
+
+    const decrease = () => {
+        num -= 1;
+        console.log(num);
+    }
+
+    const increaseNumber = () => {
+        setNumber(number+ 1);
+    }
+
+    const decreaseNumber = () => {
+        setNumber(number - 1)
+    }
+
+    console.log("카운터 화면 렌더링");
+    
+
+    return <div>
+      <h1>{num}</h1>
+      <button onClick={increase} >+1</button>
+      <button onClick={decrease} >-1</button>
+
+      <h1>{number}</h1>
+      <button onClick={increaseNumber} >+1</button>
+      <button onClick={decreaseNumber} >-1</button>
+    </div>
+}
+
+export default Counter;
