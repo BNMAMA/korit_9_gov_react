@@ -9,10 +9,14 @@ import Inputs from "./ch02/Inputs";
 import SearchName from "./ch02/SearchName";
 import UseEffect01 from "./ch03/UseEffect01";
 import UseEffect03 from "./ch03/UseEffect03";
+import UseEffect04 from "./ch03/UseEffect04";
+import Axios01 from "./ch04/Axios01";
+import Promise01 from "./ch04/Promise01";
+import Axios02 from "./ch04/Axios02";
 
 // default component는 파일명과 동일하게 하는게 좋음
 
-const currentApp = "useEffect03";
+const currentApp = "axios02";
 
 
 const appObj = { // 하나하나가 페이지임(페이지를 바꾸기 위함이다)
@@ -26,6 +30,12 @@ const appObj = { // 하나하나가 페이지임(페이지를 바꾸기 위함�
     SearchName: <SearchName />,
     useEffect01: <UseEffect01 />,
     useEffect03: <UseEffect03 />,
+    useEffect04: <UseEffect04 />,
+    axios01: <Axios01 />,
+    axios02: <Axios02 />,
+
+    promise01: <Promise01 />,
+    
     
 }
 

@@ -7,7 +7,7 @@ function UseEffect03() {
   const [result, setResult] = useState(0);
 
   useEffect(() => {
-    console.log("마운트");
+    console.log("마운트1");
   });
 
   // 첫 렌더링은 무조건 실행
