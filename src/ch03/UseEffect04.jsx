@@ -7,41 +7,76 @@ function UseEffect04() {
     // '숫자를 증가시켜 결과를 확인하세요.'
     // 라는 안내 메세지를 alert으로 출력하기
     // 최솟값 0 밑으로는 내려갈 수 없음.
-    const [num1, setNum1] = useState(0);
-    const [result, setResult] = useState(0);                                              
+    // const [num1, setNum1] = useState(0);
+    // const [result, setResult] = useState(0);                                              
     
-    useEffect(() => {
-       if (result === 0) {
-        setTimeout(() => {
-             alert('숫자를 증가시켜 결과를 확인하세요')
-        }, 100)
+    // useEffect(() => {
+    //    if (result === 0) {
+    //     setTimeout(() => {
+    //          alert('숫자를 증가시켜 결과를 확인하세요')
+    //     }, 100)
        
-       } 
-    }, [result])
+    //    } 
+    // }, [result])
+
+    // useEffect(() => {
+    //      setResult(num1 * num1)
+        
+    // }, [num1])
+
+    
+
+    // const onClickIncreaseNum1Handle = () => {
+    //     setNum1(num1 + 1);
+    // }
+    // const onClickDecreasNum1Handle = () => {
+    //     if (num1 < 0) {
+    //        console.log('0밑으로는 내려 갈 수 없음')
+    //     } setNum1(num1 - 1)
+        
+    // }
+    
+
+    // return <>
+    //     <h2>{num1}의 제곱 {result}</h2>
+        
+    //     <button onClick={onClickIncreaseNum1Handle}>1 증가 </button>
+    //     <button onClick={onClickDecreasNum1Handle}>1 감소 </button>
+    // </>
+
+    const [ num, setNum ] = useState(0);
+    const [ square, setSquare ] = useState(0);
+    const [ isZero, setZero ] = useState(true);
 
     useEffect(() => {
-         setResult(num1 * num1)
-        
-    }, [num1])
-
+        setSquare(num ** 2);
+    }, [num]);
     
-
-    const onClickIncreaseNum1Handle = () => {
-        setNum1(num1 + 1);
-    }
-    const onClickDecreasNum1Handle = () => {
-        if (num1 < 0) {
-           console.log('0밑으로는 내려 갈 수 없음')
-        } setNum1(num1 - 1)
-        
-    }
+    useEffect(() => {
+        setZero(square === 0);
+    }, [square]);
     
+    useEffect(() => {
+        if (isZero) {
+            setTimeout(() => {
+                alert("숫자를 증가시켜 결과를 확인하세요.");
+            }, 100);
+        }
+    }, [isZero]);
+
+    const handleOnClick = (value) => {
+        if (value < 0 && num < 1) {
+            return;
+        } 
+        setNum(num + value);
+        setSquare((num + value) ** 2);
+    }
 
     return <>
-        <h2>{num1}의 제곱 {result}</h2>
-        
-        <button onClick={onClickIncreaseNum1Handle}>1 증가 </button>
-        <button onClick={onClickDecreasNum1Handle}>1 감소 </button>
+        <h2>{num}</h2>
+        <h2>{square}</h2>
+        <button onClick={() => handleOnClick(1)}>1증가</button>
+        <button onClick={() => handleOnClick(-1)}>1감소</button>
     </>
 }
 

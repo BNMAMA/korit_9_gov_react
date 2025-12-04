@@ -13,10 +13,13 @@ import UseEffect04 from "./ch03/UseEffect04";
 import Axios01 from "./ch04/Axios01";
 import Promise01 from "./ch04/Promise01";
 import Axios02 from "./ch04/Axios02";
+import Axios03 from "./ch04/Axios03";
+import Axios04 from "./ch04/Axios04";
+import Axios05 from "./ch04/Axios05";
 
 // default component는 파일명과 동일하게 하는게 좋음
 
-const currentApp = "axios02";
+const currentApp = "axios05";
 
 
 const appObj = { // 하나하나가 페이지임(페이지를 바꾸기 위함이다)
@@ -33,6 +36,9 @@ const appObj = { // 하나하나가 페이지임(페이지를 바꾸기 위함�
     useEffect04: <UseEffect04 />,
     axios01: <Axios01 />,
     axios02: <Axios02 />,
+    axios03: <Axios03 />,
+    axios04: <Axios04 />,
+    axios05: <Axios05 />,
 
     promise01: <Promise01 />,
     
