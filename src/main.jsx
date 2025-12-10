@@ -16,10 +16,18 @@ import Axios02 from "./ch04/Axios02";
 import Axios03 from "./ch04/Axios03";
 import Axios04 from "./ch04/Axios04";
 import Axios05 from "./ch04/Axios05";
+import Auth01 from "./ch05/Auth01";
+import Auth02 from "./ch05/Auth02";
+import Router01 from "./ch06/Router01";
+import Router02 from "./ch06/Router02";
+import Router03 from "./ch06/Router03";
+import Router04 from "./ch06/Router04";
+import Router05 from "./ch06/Router05";
+import Css from "./ch07/Css";
 
 // default component는 파일명과 동일하게 하는게 좋음
 
-const currentApp = "axios05";
+const currentApp = "css";
 
 
 const appObj = { // 하나하나가 페이지임(페이지를 바꾸기 위함이다)
@@ -39,6 +47,15 @@ const appObj = { // 하나하나가 페이지임(페이지를 바꾸기 위함�
     axios03: <Axios03 />,
     axios04: <Axios04 />,
     axios05: <Axios05 />,
+    auth01: <Auth01 />,
+    auth02: <Auth02 />,
+    router01: <Router01 />,
+    router02: <Router02 />,
+    router03: <Router03 />,
+    router04: <Router04 />,
+    router05: <Router05 />,
+    css: <Css />,
+
 
     promise01: <Promise01 />,
     
