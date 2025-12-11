@@ -24,10 +24,16 @@ import Router03 from "./ch06/Router03";
 import Router04 from "./ch06/Router04";
 import Router05 from "./ch06/Router05";
 import Css from "./ch07/Css";
+import Zustand01 from "./ch08/Zustand01";
+import UserInfoBox from "./ch08/UserInfoBox";
+import Zustand02 from "./ch08/Zustand02";
+import Zustand03 from "./ch08/Zustand03";
+import ReactQuery01 from "./ch09/ReactQuery01";
+import ReactQuery02 from "./ch09/ReactQuery02";
 
 // default component는 파일명과 동일하게 하는게 좋음
 
-const currentApp = "css";
+const currentApp = "reactquery02";
 
 
 const appObj = { // 하나하나가 페이지임(페이지를 바꾸기 위함이다)
@@ -55,6 +61,12 @@ const appObj = { // 하나하나가 페이지임(페이지를 바꾸기 위함�
     router04: <Router04 />,
     router05: <Router05 />,
     css: <Css />,
+    zustand01: <Zustand01 />,
+    zustand02: <Zustand02 />,
+    zustand03: <Zustand03 />,
+    reactquery01: <ReactQuery01 />,
+    reactquery02: <ReactQuery02 />,
+ 
 
 
     promise01: <Promise01 />,
